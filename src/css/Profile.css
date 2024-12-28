@@ -1,0 +1,38 @@
+strong {
+  color: #cbf281;
+  font-family: "Inter", serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  initial-letter: 1%;
+}
+.basic-info p {
+  color: #ffffff;
+  font-family: "Inter", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  initial-letter: 1%;
+}
+.about-box p {
+  color: #ffffff;
+  font-family: "Inter", serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+h3 {
+  color: #ffffff;
+  font-family: "Inter", serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 30px;
+}
+h1 {
+  color: #cbf281;
+  font-family: "Inter", serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  initial-letter: 1%;
+}
