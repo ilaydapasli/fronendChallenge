@@ -6,11 +6,17 @@ import Giris from "./components/Giris";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Skills from "./components/Skills";
+import Profile from "./components/Profile";
+import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
       <Giris />
       <Skills />
+      <Profile />
+      <Projects />
+      <Footer />
     </>
   );
 }
