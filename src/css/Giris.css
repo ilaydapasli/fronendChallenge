@@ -1,7 +1,7 @@
 .site-wrapper {
   margin: 0;
   height: 100vh;
-  background: linear-gradient(to right, #4731d3 1240px, #cbf281 432px);
+  background: linear-gradient(to right, #4731d3 70%, #cbf281 30%);
 }
 h1 {
   color: #cbf281;
@@ -65,17 +65,18 @@ button {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: #ffe86e;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #8f88ff;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #8f88ff;
+  border: 1px solid;
 }
 
 input:checked + .slider:before {
@@ -91,4 +92,9 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+.image-giris img {
+  width: 350px;
+  height: 375.89px;
+  border-radius: 18px;
 }
