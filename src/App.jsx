@@ -12,11 +12,13 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <Giris />
-      <Skills />
-      <Profile />
-      <Projects />
-      <Footer />
+      <div className="container">
+        <Giris userName="ilayda" />
+        <Skills />
+        <Projects />
+        <Projects />
+        <Footer />{" "}
+      </div>
     </>
   );
 }
