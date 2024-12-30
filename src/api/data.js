@@ -1,9 +1,9 @@
-import javascript from "../img/skillsicons/js.png";
-import react from "../img/skillsicons/react.png";
-import redux from "../img/skillsicons/redux.png";
-import node from "../img/skillsicons/node.png";
-import vsCode from "../img/skillsicons/vsCode.png";
-import figma from "../img/skillsicons/figma.png";
+import javascript from "../img/skillsimg/js.jpeg";
+import react from "../img/skillsimg/react.png";
+import redux from "../img/skillsimg/redux.png";
+import node from "../img/skillsimg/node.jpeg";
+import vsCode from "../img/skillsimg/vscode.png";
+import figma from "../img/skillsimg/figma.jpeg";
 
 export const girisData = {
   title: {
