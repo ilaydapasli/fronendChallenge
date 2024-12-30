@@ -2,48 +2,33 @@ import React from "react";
 import { girisData } from "../api/data";
 
 function Skills() {
-  const leftSkills = girisData.skills.slice(0, 3);
-  const rightSkills = girisData.skills.slice(3);
-
   return (
-    <div className="h-screen bg-white flex justify-center items-center">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
       {/* İçerik Alanı */}
-      <div className="w-full max-w-[960px] flex flex-col justify-start pl-12">
-        {/* Başlık */}
-        <h1 className=" font-inter font-bold text-[48px] leading-[58.09px] tracking-[1%] text-[#4832D3] flex">
-          Skills
-        </h1>
+      <div className="flex items-center ">
+        <div className="grid md:grid-cols-3 max-w-fit max-h-fit ">
+          {/* Sol Alan: H1 */}
+          <div className="col-span-1 flex items-start ml-12">
+            <h1 className="font-inter font-bold text-[48px] leading-[58.09px] tracking-[1%] text-[#4832D3]">
+              Skills
+            </h1>
+          </div>
 
-        {/* İkonların Bulunduğu Konteyner */}
-        <div className="flex flex-col md:flex-row justify-between w-full">
-          {/* Sol Sütun */}
-          <div className="flex flex-col  md:w-1/2">
-            {leftSkills.map((skill, index) => (
+          {/* Sağ Alan: Resimler */}
+          <div className="col-span-2 grid grid-cols-2 gap-12">
+            {girisData.skills.map((skill, index) => (
               <div
                 key={index}
-                className=" flex items-center justify-center  mx-auto gap-[24px]"
+                className="flex items-center justify-center max-w-[290px]  max-h-[120px] gap-7 mr-10 p-10 "
               >
                 <img
                   src={skill.image}
                   alt={`Skill ${index + 1}`}
-                  className="w-[290px] h-[210px] "
+                  className="w-[120px] h-[120px] object-cover rounded-md "
                 />
-              </div>
-            ))}
-          </div>
-
-          {/* Sağ Sütun */}
-          <div className="flex flex-col  md:w-1/2">
-            {rightSkills.map((skill, index) => (
-              <div
-                key={index}
-                className=" flex items-center justify-center gap-[24px] mx-auto"
-              >
-                <img
-                  src={skill.image}
-                  alt={`Skill ${index + 4}`}
-                  className="w-[290px] h-[210px]"
-                />
+                <h4 className="w-[69px] h-[36px] font-inter font-medium text-[24px] leading-[36px] text-[#777777]">
+                  {skill.name}
+                </h4>
               </div>
             ))}
           </div>
