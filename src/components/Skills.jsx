@@ -1,45 +1,52 @@
 import React from "react";
-import jsimg from "../img/skillsimg/js.jpeg";
-import reactimg from "../img/skillsimg/react.png";
-import reduximg from "../img/skillsimg/redux.png";
-
-import nodeimg from "../img/skillsimg/node.jpeg";
-import vsimg from "../img/skillsimg/vscode.png";
-import figmaimg from "../img/skillsimg/figma.jpeg";
-import "../css/Skills.css";
+import { girisData } from "../api/data";
 
 function Skills() {
+  const leftSkills = girisData.skills.slice(0, 3);
+  const rightSkills = girisData.skills.slice(3);
+
   return (
-    <div className="main-container">
-      <div>
-        <h2 style={{ color: "#4832D3" }}>Skills</h2>
-      </div>
+    <div className="h-screen bg-white flex justify-center items-center">
+      {/* İçerik Alanı */}
+      <div className="w-full max-w-[960px] flex flex-col justify-start pl-12">
+        {/* Başlık */}
+        <h1 className=" font-inter font-bold text-[48px] leading-[58.09px] tracking-[1%] text-[#4832D3] flex">
+          Skills
+        </h1>
 
-      <div className="skill-container">
-        <div className="skill-card">
-          <img src={jsimg} alt="" />
-          <h3>JAVASCRIPT</h3>
-        </div>
-        <div className="skill-card">
-          <img src={reactimg} alt="" />
-          <h3>REACT</h3>
-        </div>
-        <div className="skill-card">
-          <img src={reduximg} alt="" />
-          <h3>REDUX</h3>
-        </div>
-        <div className="skill-card">
-          <img src={nodeimg} alt="" />
+        {/* İkonların Bulunduğu Konteyner */}
+        <div className="flex flex-col md:flex-row justify-between w-full">
+          {/* Sol Sütun */}
+          <div className="flex flex-col  md:w-1/2">
+            {leftSkills.map((skill, index) => (
+              <div
+                key={index}
+                className=" flex items-center justify-center  mx-auto gap-[24px]"
+              >
+                <img
+                  src={skill.image}
+                  alt={`Skill ${index + 1}`}
+                  className="w-[290px] h-[210px] "
+                />
+              </div>
+            ))}
+          </div>
 
-          <h3>NODE</h3>
-        </div>
-        <div className="skill-card">
-          <img src={vsimg} alt="" />
-          <h3>VS CODE</h3>
-        </div>
-        <div className="skill-card">
-          <img src={figmaimg} alt="" />
-          <h3>FIGMA</h3>
+          {/* Sağ Sütun */}
+          <div className="flex flex-col  md:w-1/2">
+            {rightSkills.map((skill, index) => (
+              <div
+                key={index}
+                className=" flex items-center justify-center gap-[24px] mx-auto"
+              >
+                <img
+                  src={skill.image}
+                  alt={`Skill ${index + 4}`}
+                  className="w-[290px] h-[210px]"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
