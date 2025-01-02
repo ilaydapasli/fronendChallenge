@@ -28,7 +28,7 @@ function Header({ userName }) {
       }}
     >
       {/* Header Bölümü */}
-      <header className="flex justify-between items-center p-4 bg-gray-800 bg-opacity-75 text-white">
+      <header className="flex justify-between items-center p-4  text-white">
         <h3 className="text-lg font-semibold">{userName}</h3>
         <div className="flex space-x-4">
           <button onClick={changeLang} className="hover:underline text-white">
@@ -48,7 +48,7 @@ function Header({ userName }) {
         <div className="flex flex-col md:flex-row items-center p-8 md:p-12 rounded-lg">
           {/* Metin Alanı */}
           <div className="text-center md:text-left">
-            <h1 className="primary text-6xl font-bold mb-4">
+            <h1 className="primary text-6xl font-bold mb-4 text-[#CBF281]">
               {headerData.title[lang]} {/* Dil seçimine göre başlık */}
             </h1>
             <p className="text-white mb-6 text-2xl">
