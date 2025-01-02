@@ -1,6 +1,6 @@
 import javascript from "../img/skillsimg/js.jpeg";
 import react from "../img/skillsimg/react.png";
-import redux from "../img/skillsimg/Group101.png";
+import redux from "../img/skillsimg/redux2.png";
 import node from "../img/skillsimg/node.jpeg";
 import vsCode from "../img/skillsimg/vscode.png";
 import figma from "../img/skillsimg/figma.jpeg";
