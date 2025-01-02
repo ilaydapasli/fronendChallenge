@@ -1,21 +1,37 @@
-import { useState } from "react";
-
-import Giris from "./components/Giris";
+import { useContext, useEffect, useState } from "react";
 
 import Skills from "./components/Skills";
 import Profile from "./components/Profile";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
-import Bos from "./components/Bos";
+import { useDispatch, useSelector } from "react-redux";
+import { getUsers } from "./store/actions/userAction";
+
+import Header from "./components/Header";
+import { SiteGlobalContext } from "./context/SiteGlobalProvider";
 function App() {
+  const dispatch = useDispatch();
+  const user = useSelector((store) => store.users);
+  const { theme } = useContext(SiteGlobalContext);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
+
+  useEffect(() => {
+    dispatch(getUsers());
+  }, [dispatch]);
   return (
     <>
       <div className="container">
-        <Giris userName="ilayda" />
+        <Header userName="ilayda" />
+
         <Skills />
         <Profile />
         <Projects />
-        <Footer />
+        <Footer email="ilayda@pasli.com" />
       </div>
     </>
   );
