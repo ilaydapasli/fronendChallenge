@@ -13,7 +13,6 @@ export default {
         darkprimary: "#171043", // Örnek bir yeşil tonu
         darksecondary: "#1A210B", // Örnek bir gri tonu
         darkgrey: "##2B2727",
-
         buttonColor: "#3730A3",
       },
     },
