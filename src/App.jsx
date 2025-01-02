@@ -16,7 +16,6 @@ function App() {
         <Profile />
         <Projects />
         <Footer />
-        <Bos />
       </div>
     </>
   );
