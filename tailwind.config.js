@@ -7,6 +7,9 @@ export default {
         center: true,
         screens: {},
       },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
       colors: {
         primary: "#4731D3", // Örnek bir mor
         secondary: "#CBF281", // Örnek bir yeşil
