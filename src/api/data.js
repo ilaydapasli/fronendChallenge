@@ -16,6 +16,11 @@ import instagram_dark from "../img/socialmedia/instagram-dark.svg";
 import projectimg1 from "../img/project/project1.png";
 import projectimg2 from "../img/project/project2.png";
 import profileimg from "../img/profile.png";
+import github from "../img/button/github.png";
+import githubdark from "../img/button/githubdark.png";
+import LinkedIn from "../img/button/LinkedIn.png";
+import LinkedInDark from "../img/button/LinkedIndark.png";
+
 export const headerData = {
   title: {
     en: "I am a Frontend Developer...",
@@ -24,6 +29,12 @@ export const headerData = {
   description: {
     en: "...who likes to craft solid and scalable frontend products with great user experiences.",
     tr: "Harika kullanıcı deneyimlerine sahip sağlam ve ölçeklenebilir ön uç ürünleri oluşturmayı seven biriyim.",
+  },
+  buttonimg: {
+    github,
+    githubdark,
+    LinkedIn,
+    LinkedInDark,
   },
 };
 
