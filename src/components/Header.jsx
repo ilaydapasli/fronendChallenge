@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { SiteGlobalContext } from "../context/SiteGlobalProvider";
-import { headerData, skillsData, skillsHeader } from "../api/data"; // Yeni veri kaynağını import ettik
+import { headerData } from "../api/data"; // Yeni veri kaynağını import ettik
 import girisimage from "/img/giris.png";
 import backgroundImage from "/img/backgrounds/hero-bg.png";
 import darkbackgroundImage from "/img/backgrounds/hero-bgdark.png";
