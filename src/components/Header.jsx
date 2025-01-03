@@ -4,8 +4,7 @@ import { headerData, skillsData, skillsHeader } from "../api/data"; // Yeni veri
 import girisimage from "../img/giris.png";
 import backgroundImage from "../img/backgrounds/hero-bg.png";
 import darkbackgroundImage from "../img/backgrounds/hero-bgdark.png";
-import githubIcon from "../img/iconlar/github.png";
-import LinkedIcon from "../img/iconlar/LinkedIn.png";
+
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 
 function Header({ userName }) {
@@ -28,18 +27,57 @@ function Header({ userName }) {
       }}
     >
       {/* Header Bölümü */}
-      <header className="flex justify-between items-center p-4  text-white">
-        <h3 className="text-lg font-semibold">{userName}</h3>
-        <div className="flex space-x-4">
-          <button onClick={changeLang} className="hover:underline text-white">
-            {lang === "tr" ? "English" : "Türkçe"}
-          </button>
-          <button
-            onClick={toggleDarkMode}
-            className="hover:underline text-white"
-          >
-            {theme === "dark" ? "Light Mode" : "Dark Mode"}
-          </button>
+      <header className="flex justify-center items-center p-4 text-white">
+        <div className="flex justify-between items-center w-full max-w-6xl">
+          <h3 className="text-[#CBF281] font-inter font-bold text-[32px] leading-[72px]">
+            {userName}
+          </h3>
+          <div className="flex items-center space-x-4 mr-14 gap-3">
+            <button
+              onClick={changeLang}
+              className="text-white w-[138px] h-[18px] font-inter font-bold text-[15px]"
+            >
+              {lang === "en" ? (
+                <span>
+                  <span className="text-[#CAF181]">Türkçe</span>'ye geçin
+                </span>
+              ) : (
+                <span>
+                  Switch to
+                  <span className="text-[#CAF181]"> English</span>
+                </span>
+              )}
+            </button>
+            <div className="flex items-center space-x-2">
+              {/* Custom Toggle */}
+              <label
+                htmlFor="toggle-dark-mode"
+                className="flex items-center cursor-pointer"
+              >
+                <input
+                  type="checkbox"
+                  id="toggle-dark-mode"
+                  onChange={toggleDarkMode}
+                  checked={theme === "dark"}
+                  className="toggle-checkbox hidden"
+                />
+                <span className="toggle-label block w-12 h-6 bg-gray-400 rounded-full transition-all duration-300 relative  ml-1">
+                  <span
+                    className={`dot w-6 h-6 bg-white rounded-full absolute top-0 left-0 transition-all duration-300 ${
+                      theme === "dark" ? "transform translate-x-6" : ""
+                    }`}
+                  />
+                </span>
+                <span
+                  className={`mr-2 font-inter font-bold text-[15px]  ml-2 ${
+                    theme === "light" ? "text-[#4731D3]" : "text-[#D9D9D9]"
+                  }`}
+                >
+                  {theme === "dark" ? "Light Mode" : "Dark Mode"}
+                </span>
+              </label>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -55,32 +93,52 @@ function Header({ userName }) {
               {headerData.description[lang]} {/* Dil seçimine göre açıklama */}
             </p>
             <div className="flex justify-center md:justify-start space-x-4">
-              <button
+              <a
                 href="https://github.com"
                 target="_blank"
-                rel="noopener noreferrer"
-                className={`w-[127px] h-[52px] rounded-[6px] px-[12px] py-[12px] ${
+                className={`flex items-center w-[127px] h-[52px] rounded-[6px] px-[12px] py-[12px] ${
                   theme === "dark"
                     ? "bg-[#252128] border-[#FFFFFF] text-[#FFFFFF]"
                     : "bg-[#FFFFFF] border-white text-[#3730A3]"
                 }`}
               >
+                <img
+                  src={
+                    theme === "dark"
+                      ? headerData.buttonimg.githubdark
+                      : headerData.buttonimg.github
+                  }
+                  alt="GitHub Icon"
+                  className="w-5 h-5 mr-2" // Bu sınıf simgeyi ve metni yan yana getirir
+                />
                 <span className="leading-7 font-medium font-inter text-[18px]">
-                  Github
+                  GitHub
                 </span>
-              </button>
-              <button
-                href="https://github.com"
-                className={`w-[127px] h-[52px] rounded-[6px] px-[12px] py-[12px] ${
+              </a>
+
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center w-[127px] h-[52px] rounded-[6px] px-[12px] py-[12px] ${
                   theme === "dark"
                     ? "bg-[#252128] border-[#FFFFFF] text-[#FFFFFF]"
                     : "bg-[#FFFFFF] border-white text-[#3730A3]"
                 }`}
               >
+                <img
+                  src={
+                    theme === "dark"
+                      ? headerData.buttonimg.LinkedInDark
+                      : headerData.buttonimg.LinkedIn
+                  }
+                  alt="LinkedIn Icon"
+                  className="w-5 h-5 mr-2" // Bu sınıf simgeyi ve metni yan yana getirir
+                />
                 <span className="leading-7 font-medium font-inter text-[18px]">
                   LinkedIn
                 </span>
-              </button>
+              </a>
             </div>
           </div>
 
