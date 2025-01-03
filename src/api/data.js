@@ -1,25 +1,25 @@
-import javascript from "../img/skillsimg/js.jpeg";
-import react from "../img/skillsimg/react.png";
-import redux from "../img/skillsimg/redux2.png";
-import node from "../img/skillsimg/node.jpeg";
-import vsCode from "../img/skillsimg/vscode.png";
-import figma from "../img/skillsimg/figma.jpeg";
+import javascript from "/img/skillsimg/js.jpeg";
+import react from "/img/skillsimg/react.png";
+import redux from "/img/skillsimg/redux2.png";
+import node from "/img/skillsimg/node.jpeg";
+import vsCode from "/img/skillsimg/vscode.png";
+import figma from "/img/skillsimg/figma.jpeg";
 
-import twitter from "../img/socialmedia/twitter.svg";
-import codepen from "../img/socialmedia/codepen.svg";
-import atsign from "../img/socialmedia/at-sign.svg";
-import instagram from "../img/socialmedia/instagram.svg";
-import twitter_dark from "../img/socialmedia/twitter-dark.svg";
-import codepen_dark from "../img/socialmedia/codepen-dark.svg";
-import atsign_dark from "../img/socialmedia/at-sign-dark.svg";
-import instagram_dark from "../img/socialmedia/instagram-dark.svg";
-import projectimg1 from "../img/project/project1.png";
-import projectimg2 from "../img/project/project2.png";
-import profileimg from "../img/profile.png";
-import github from "../img/button/github.png";
-import githubdark from "../img/button/githubdark.png";
-import LinkedIn from "../img/button/LinkedIn.png";
-import LinkedInDark from "../img/button/LinkedIndark.png";
+import twitter from "/img/socialmedia/twitter.svg";
+import codepen from "/img/socialmedia/codepen.svg";
+import atsign from "/img/socialmedia/at-sign.svg";
+import instagram from "/img/socialmedia/instagram.svg";
+import twitter_dark from "/img/socialmedia/twitter-dark.svg";
+import codepen_dark from "/img/socialmedia/codepen-dark.svg";
+import atsign_dark from "/img/socialmedia/at-sign-dark.svg";
+import instagram_dark from "/img/socialmedia/instagram-dark.svg";
+import projectimg1 from "/img/project/project1.png";
+import projectimg2 from "/img/project/project2.png";
+import profileimg from "/img/profile.png";
+import github from "/img/button/github.png";
+import githubdark from "/img/button/githubdark.png";
+import LinkedIn from "/img/button/LinkedIn.png";
+import LinkedInDark from "/img/button/LinkedIndark.png";
 
 export const headerData = {
   title: {

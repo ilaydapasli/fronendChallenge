@@ -3,8 +3,8 @@ import { SiteGlobalContext } from "../context/SiteGlobalProvider";
 import { projectData } from "../api/data";
 import { projectsHeader } from "../api/data";
 import { useContext } from "react";
-import darkbg from "../img/backgrounds/projects-bgdark.png";
-import bg from "../img/backgrounds/projects-bg.png";
+import darkbg from "/img/backgrounds/projects-bgdark.png";
+import bg from "/img/backgrounds/projects-bg.png";
 
 function Projects() {
   const { theme, lang } = useContext(SiteGlobalContext);

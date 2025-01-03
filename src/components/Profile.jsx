@@ -2,8 +2,8 @@ import React from "react";
 import { SiteGlobalContext } from "../context/SiteGlobalProvider";
 import { useContext } from "react";
 import { profileData } from "../api/data";
-import ProfileBg from "../img/backgrounds/profile-bg.png";
-import darkProfileBg from "../img/backgrounds/profile-bg-dark.png";
+import ProfileBg from "/img/backgrounds/profile-bg.png";
+import darkProfileBg from "/img/backgrounds/profile-bg-dark.png";
 
 function Profile() {
   const { theme, lang } = useContext(SiteGlobalContext);
