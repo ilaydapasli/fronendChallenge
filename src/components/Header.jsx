@@ -87,10 +87,14 @@ function Header({ userName }) {
           {/* Metin Alanı */}
           <div className="text-center md:text-left">
             <h1 className="primary text-6xl font-bold mb-4 text-[#CBF281]">
-              {headerData.title[lang]} {/* Dil seçimine göre başlık */}
+              {lang === "tr" ? headerData.title.tr : headerData.title.en}{" "}
+              {/* Dil seçimine göre başlık */}
             </h1>
             <p className="text-white mb-6 text-2xl">
-              {headerData.description[lang]} {/* Dil seçimine göre açıklama */}
+              {lang === "tr"
+                ? headerData.description.tr
+                : headerData.description.en}{" "}
+              {/* Dil seçimine göre açıklama */}
             </p>
             <div className="flex justify-center md:justify-start space-x-4">
               <a
